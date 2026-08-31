@@ -1,0 +1,6 @@
+# Initial ownership. Add work-package-specific owners as the repository grows.
+* @gijsverdoeskleijn
+/docs/ @gijsverdoeskleijn
+/docs/_data/ @gijsverdoeskleijn
+/.github/workflows/ @gijsverdoeskleijn
+

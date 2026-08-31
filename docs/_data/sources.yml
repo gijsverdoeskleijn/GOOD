@@ -1,0 +1,51 @@
+version: 1
+sources:
+  - id: good-docs
+    name: GOOD documentation repository
+    provider: github
+    url: https://github.com/gijsverdoeskleijn/GOOD
+    ref: main
+    documented_revision: null
+    owner: GOOD documentation owner
+    access: internal
+    enabled: true
+    monitor: false
+    paths:
+      - docs/
+      - README.md
+    api_docs: []
+    notes: The portal source; monitored by its own pull-request checks.
+
+  - id: good-project-website
+    name: GOOD preliminary project website
+    provider: github
+    url: https://github.com/balbinot/good-platform
+    ref: main
+    documented_revision: eb748c62aae8f7c44cc42d0b025ec68480138a9b
+    owner: GOOD project website owner
+    access: public
+    enabled: true
+    monitor: true
+    paths:
+      - README.md
+      - index.md
+      - _config.yml
+    api_docs: []
+    notes: Initial public project overview and terminology source.
+
+  - id: astrowise-good
+    name: GOOD-WISE / Astro-WISE implementation
+    provider: gitlab
+    url: null
+    ref: main
+    documented_revision: null
+    owner: GOOD WP2 owner
+    access: restricted
+    enabled: false
+    monitor: true
+    paths: []
+    api_docs:
+      - language: python
+        path: null
+    notes: Add the approved gitlab.astro-wise.org repository URL and baseline revision.
+

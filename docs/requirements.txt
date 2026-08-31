@@ -1,0 +1,7 @@
+Sphinx>=8.1,<9
+myst-parser>=4,<5
+furo>=2024.8.6
+PyYAML>=6,<7
+breathe>=4.35,<5
+sphinxcontrib-mermaid>=1.0,<2
+

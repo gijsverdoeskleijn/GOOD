@@ -1,0 +1,70 @@
+name: Documentation source freshness
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  inspect-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the documentation source
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install registry parser
+        run: python -m pip install "PyYAML>=6,<7"
+
+      - name: Compare registered and current source revisions
+        id: freshness
+        continue-on-error: true
+        run: python tools/check_source_freshness.py --report build/source-freshness.md
+
+      - name: Upload freshness evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation-source-freshness-${{ github.run_id }}
+          path: build/source-freshness.md
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Create or update the documentation-drift issue
+        if: steps.freshness.outcome == 'failure'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const title = 'Documentation source drift requires review';
+            const report = fs.readFileSync('build/source-freshness.md', 'utf8');
+            const body = `${report}\n\nAutomated run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100
+            });
+            const existing = issues.find(issue => !issue.pull_request && issue.title === title);
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body
+              });
+            }

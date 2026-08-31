@@ -1,0 +1,14 @@
+:root {
+  --color-brand-primary: #155b75;
+  --color-brand-content: #155b75;
+}
+
+.admonition.internal {
+  border-left-color: #d08b00;
+}
+
+.content-metadata {
+  color: var(--color-foreground-secondary);
+  font-size: 0.9rem;
+}
+

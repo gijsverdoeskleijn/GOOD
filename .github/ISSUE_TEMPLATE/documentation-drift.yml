@@ -1,0 +1,45 @@
+name: Documentation drift
+description: Report documentation that differs from an approved source.
+title: "[docs drift] "
+body:
+  - type: markdown
+    attributes:
+      value: Do not paste credentials or restricted source material into this issue.
+  - type: input
+    id: source
+    attributes:
+      label: Registered source and revision
+      description: Give the source identifier, old revision, and current revision.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link to the relevant source locations and describe the mismatch.
+    validations:
+      required: true
+  - type: textarea
+    id: pages
+    attributes:
+      label: Affected documentation
+      description: List the pages, components, interfaces, or requirements affected.
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Required owner or reviewer
+    validations:
+      required: true
+

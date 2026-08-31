@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gijsverdoeskleijn/GOOD/docs/content-metadata.schema.json",
+  "title": "GOOD documentation page metadata",
+  "type": "object",
+  "required": ["owner", "status", "access", "last_reviewed", "review_interval_days", "sources"],
+  "properties": {
+    "owner": {"type": "string", "minLength": 1},
+    "status": {"enum": ["draft", "in-review", "approved", "deprecated"]},
+    "access": {"enum": ["internal", "restricted", "public"]},
+    "last_reviewed": {"type": "string", "format": "date"},
+    "review_interval_days": {"type": "integer", "minimum": 1},
+    "sources": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": true
+}

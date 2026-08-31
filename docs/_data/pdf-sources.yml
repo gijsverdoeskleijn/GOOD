@@ -1,0 +1,30 @@
+version: 1
+drive_folder: https://drive.google.com/drive/u/0/folders/0APUAExlJlK0gUk9PVA
+sources:
+  - id: good-proposal
+    title: FINAL GOOD Open Science proposal application
+    owner: GOOD project lead
+    access: restricted
+    drive_file_id: null
+    revision: approved proposal
+    review_status: registered
+    notes: Governing source for project goals, work packages, schedule, and Open Science commitments.
+
+  - id: astrowise-development-manual
+    title: Development and User Manual Astro-WISE
+    owner: GOOD WP2 owner
+    access: restricted
+    drive_file_id: null
+    revision: null
+    review_status: awaiting-drive-id
+    notes: Candidate source for GOOD-WISE developer and operations documentation.
+
+  - id: tudat-reference-paper
+    title: Luigi/Tudat reference paper
+    owner: GOOD WP1 owner
+    access: restricted
+    drive_file_id: null
+    revision: null
+    review_status: awaiting-drive-id
+    notes: Candidate source for Tudat architecture and scientific-software context.
+
