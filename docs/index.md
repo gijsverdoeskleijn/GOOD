@@ -48,6 +48,7 @@ interfaces/index
 data-and-provenance/index
 operations/index
 decisions/index
+WP4/index
 reference/index
 ```
 
@@ -65,4 +66,3 @@ Pages marked **draft** are useful working material but require their named
 owner's review. Every page records its owner, access class, review date, and
 registered sources in machine-readable metadata. Every build records the
 portal revision and source baselines in a manifest.
-
