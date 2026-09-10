@@ -17,12 +17,41 @@ sections so they can evolve with the code without duplicating content here.
 
 ## Project goals
 
-- Provide a general, open platform for orbital-dynamics research.
+- Provide a general, open platform to support orbital-dynamics sicentific research (e.g. cometary dynamics) and to support socio-economic use cases (e.g., light pollution by satellites which is detrimental to optical astronomy).
+- Which scientific research to support is specified in the GOOD use cases (see below).
 - Link data acquisition, traceable analysis, and scientific applications.
 - Advance and integrate Tudat and GOOD-WISE/Astro-WISE capabilities.
 - Make software, data use, configuration, provenance, and results reproducible
   in accordance with Open Science and FAIR principles.
-- Support research and training across the GOOD science use cases.
+
+
+## Development approach
+
+The proposed development approach is to first build a prototype of the GOOD platform. And secondly the final GOOD platform. Two options are considered as architecture of the prototype GOOD platform. 
+1. taking the FOTOS OPS API and adapt it so that it interfaces between Tudat orbit pipelines and the AstroWISE database.
+2. taking the FOTOS API and FOTOS OPS database and adapt the FOTOS OPS database to support also the AstroWISE image processing pipelines.
+
+One of the two architectures is selected as the architecture of the prototype platform. This is then implemented and qualified.
+
+After building the prototype GOOD platform the architectural design of the GOOD platform is made. It takes in the lessons learned from the GOOD prototype platform. Then implemented then qualified.
+
+There will be a working platform at all times. The prototype platform is operational until the final platform is operational. 
+
+### Support from AI
+
+GOOD team will develop a method to let AI be the main custodian of documentation. Keeping it up to date as decision are made. 
+
+GOOD team will develop guidelines how AI can assist in  design, implementation, qualification (software testing, system testing), operations, helpdesk.
+
+## GOOD use cases
+
+The proposed GOOD science cases that drive the prototype GOOD platform are: 
+
+- Redo Comet astrom by Margherita inside GOOD prototype
+- Redo Come dynamics by Margherita
+- Apophis benchmark
+- usecase adding a new catalog dataset to be handled by the GOOD platform
+- usecase geocentric satellite
 
 ## Work packages
 
@@ -38,6 +67,12 @@ sections so they can evolve with the code without duplicating content here.
 Named owners, contributors, effort, milestones, and dependencies must be
 verified against the approved work-package plan before this page is promoted
 from draft.
+
+## Mapping tasks to persons
+
+## Mapping persons to tasks
+
+## Schedule: mapping tasks onto time
 
 ## Planning views
 
