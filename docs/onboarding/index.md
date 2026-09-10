@@ -36,6 +36,7 @@ and traceable from input data and software versions to scientific results.
 - Approved Google Drive project-document folder
 - Issue tracker and team-chat channels
 - Required development and test infrastructure
+- do you have access to computer system environments, gitlab, googledrive etcetera.And to how-tos in using these
 
 Credentials must never be placed in documentation, source files, build logs, or
 AI prompts. Use the approved secret-management mechanisms for each service.

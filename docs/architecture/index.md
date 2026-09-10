@@ -10,6 +10,8 @@ sources:
   - tudat-reference-paper
 ---
 
+This page shall contain diagrams of the components and how they are integrated into the architecture of the prototype platform. One of the components are the user-interfaces, incl user-interfaces for visualization. 
+
 # Conceptual architecture
 
 GOOD links acquisition data to traceable analysis and scientific applications.
