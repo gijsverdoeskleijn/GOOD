@@ -18,12 +18,19 @@ python -m pip install -r docs/requirements.txt
 make docs
 ```
 
-Open `build/html/index.html` after the build. Before proposing a change, run:
+Before proposing a change, run:
 
 ```console
 make docs-check
 ```
 
+## View the documentation
+Open `build/html/index.html` after the build. 
+
+For example Gijs can enter in the Chrome browser on his macbook: file:///Users/G.A.Verdoes.Kleijn/RandD/GOOD/documentation/build/html/index.html
+
+
+## Various other things. 
 The documentation sources, contributor guidance, source registries, and
 governance rules are under [`docs/`](docs/index.md). Documentation-agent rules
 are in [`AGENTS.md`](AGENTS.md).
