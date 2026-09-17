@@ -47,9 +47,9 @@ GOOD team will develop guidelines how AI can assist in  design, implementation, 
 
 The proposed GOOD science cases that drive the prototype GOOD platform are: 
 
-- Redo extraction of precision astrometry from comets by Margherita inside GOOD (prototype)
-- Redo Comet dynamical orbit modelling of Margherita inside GOOD prototype
-- Apophis benchmark
+- [Redo extraction of precision astrometry from comets by Margherita inside GOOD (prototype)](https://docs.google.com/spreadsheets/d/1TkMxX6Q1LeDtnWEv6geDCf8t2iW9ECfo8B1xF8voY4o/edit?gid=1049909592#gid=1049909592)
+- [Redo Comet dynamical orbit modelling of Margherita inside GOOD prototype](https://docs.google.com/spreadsheets/d/1TkMxX6Q1LeDtnWEv6geDCf8t2iW9ECfo8B1xF8voY4o/edit?gid=1049909592#gid=1049909592)
+- [Apophis orbital modelling benchmark using existing astrometry](https://docs.google.com/spreadsheets/d/1TkMxX6Q1LeDtnWEv6geDCf8t2iW9ECfo8B1xF8voY4o/edit?gid=1049909592#gid=1049909592)
 - usecase adding a new catalog dataset to be handled by the GOOD platform
 - usecase geocentric satellite
 
